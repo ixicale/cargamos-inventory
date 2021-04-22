@@ -1,0 +1,9 @@
+# HTTP utilities
+Werkzeug==0.16.1
+# API Flask
+Flask==1.1.2
+flask-RESTplus
+# DataBase Postgres
+Flask-SQLAlchemy==2.4.4
+psycopg2-binary==2.8.6
+psycopg2==2.8.6
