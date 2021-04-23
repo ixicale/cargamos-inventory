@@ -20,7 +20,7 @@ class DevConfig(Config):
 
 class ProConfig(Config):
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = config("DATABASE_URL", default="localhost")
+    SQLALCHEMY_DATABASE_URI = config("DB_URI", default="localhost")
 
 
 setup = {
