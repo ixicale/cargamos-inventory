@@ -11,7 +11,7 @@ from decouple import config as config_decouple
 def create_app(env = None):
     app = Flask(__name__)
     if env is None:
-        app.config.from_object(setup['development'])
+        app.config.from_object(setup['production'])
     else:
         app.config.from_object(env)
 
