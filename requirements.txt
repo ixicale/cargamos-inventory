@@ -6,7 +6,6 @@ flask-RESTplus
 # DataBase Postgres
 Flask-SQLAlchemy==2.4.4
 psycopg2-binary==2.8.6
-psycopg2==2.8.6
 # heroku package requires
 gunicorn==20.1.0
 python-decouple==3.4
