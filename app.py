@@ -4,8 +4,7 @@
 from flask import Flask
 
 # Aplicación
-from application import setup, db, api
-from decouple import config as config_decouple
+from application import setup, db, api, config
 
 
 def create_app(env = None):
@@ -19,14 +18,14 @@ def create_app(env = None):
         db.init_app(app)
         db.create_all()
 
+    api.init_app(app)  # loads resources
     return app
 
 
 env = setup["development"]
-if config_decouple("PRODUCTION", default=False):
+if config("PRODUCTION", default=False):
     env = setup["production"]
 
 if __name__ == "__main__":
     app = create_app(env)
-    api.init_app(app)  # loads resources
     app.run(debug=True, host="0.0.0.0")
