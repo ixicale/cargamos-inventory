@@ -27,4 +27,4 @@ if config("PRODUCTION", default=False):
     env = setup["production"]
 
 app = create_app(env)
-app.run(debug=True, host="0.0.0.0")
+# app.run(debug=True, host="0.0.0.0")
