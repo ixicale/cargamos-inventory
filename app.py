@@ -3,7 +3,7 @@
 # Flask
 from flask import Flask
 
-# Aplicación
+# Application
 from application import setup, db, api, config
 
 
@@ -27,4 +27,3 @@ if config("PRODUCTION", default=False):
     env = setup["production"]
 
 app = create_app(env)
-# app.run(debug=True, host="0.0.0.0")
